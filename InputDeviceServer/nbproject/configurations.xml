@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="97">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>Application.h</itemPath>
+      <itemPath>DriverLcdST7735R/DriverLcdST7735R.h</itemPath>
+      <itemPath>DriverLcdST7735R/DriverLcdST7735RText.h</itemPath>
+      <itemPath>DriverOledSSD1306/DriverOledSSD1306.h</itemPath>
+      <itemPath>DriverOledSSD1306/DriverOledSSD1306Text.h</itemPath>
+      <itemPath>InputDevices/InputDevices.h</itemPath>
+      <itemPath>OutputTest.h</itemPath>
+      <itemPath>font/font.h</itemPath>
+      <itemPath>DriverGPIO/gpio.h</itemPath>
+      <itemPath>DriverI2C/i2c.h</itemPath>
+      <itemPath>DriverLcdST7735R/lcdST7735R_CMD.h</itemPath>
+      <itemPath>myCommon.h</itemPath>
+      <itemPath>DriverOledSSD1306/oledSSD1306_CMD.h</itemPath>
+      <itemPath>port.h</itemPath>
+      <itemPath>DriverSpi/spi.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>Application.cpp</itemPath>
+      <itemPath>DriverLcdST7735R/DriverLcdST7735R.cpp</itemPath>
+      <itemPath>DriverLcdST7735R/DriverLcdST7735RText.cpp</itemPath>
+      <itemPath>DriverOledSSD1306/DriverOledSSD1306.cpp</itemPath>
+      <itemPath>DriverOledSSD1306/DriverOledSSD1306Text.cpp</itemPath>
+      <itemPath>InputDevices/InputDevices.cpp</itemPath>
+      <itemPath>OutputTest.cpp</itemPath>
+      <itemPath>PythonWrapper.cpp</itemPath>
+      <itemPath>font/font.c</itemPath>
+      <itemPath>DriverGPIO/gpio.c</itemPath>
+      <itemPath>DriverI2C/i2c.c</itemPath>
+      <itemPath>main.cpp</itemPath>
+      <itemPath>DriverSpi/spi.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>font</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>../../libraries/wiringPi/wiringPi</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <commandLine>-lwiringPi -lpthread</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="Application.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Application.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DriverGPIO/gpio.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="DriverGPIO/gpio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DriverI2C/i2c.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="DriverI2C/i2c.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DriverLcdST7735R/DriverLcdST7735R.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="DriverLcdST7735R/DriverLcdST7735R.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DriverLcdST7735R/DriverLcdST7735RText.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="DriverLcdST7735R/DriverLcdST7735RText.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DriverLcdST7735R/lcdST7735R_CMD.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DriverOledSSD1306/DriverOledSSD1306.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="DriverOledSSD1306/DriverOledSSD1306.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DriverOledSSD1306/DriverOledSSD1306Text.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="DriverOledSSD1306/DriverOledSSD1306Text.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DriverOledSSD1306/oledSSD1306_CMD.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DriverSpi/spi.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="DriverSpi/spi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="InputDevices/InputDevices.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="InputDevices/InputDevices.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="OutputTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="OutputTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PythonWrapper.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="font/font.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="font/font.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="myCommon.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="port.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="Application.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Application.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DriverGPIO/gpio.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="DriverGPIO/gpio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DriverI2C/i2c.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="DriverI2C/i2c.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DriverLcdST7735R/DriverLcdST7735R.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="DriverLcdST7735R/DriverLcdST7735R.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DriverLcdST7735R/DriverLcdST7735RText.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="DriverLcdST7735R/DriverLcdST7735RText.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DriverLcdST7735R/lcdST7735R_CMD.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DriverOledSSD1306/DriverOledSSD1306.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="DriverOledSSD1306/DriverOledSSD1306.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DriverOledSSD1306/DriverOledSSD1306Text.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="DriverOledSSD1306/DriverOledSSD1306Text.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DriverOledSSD1306/oledSSD1306_CMD.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="DriverSpi/spi.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="DriverSpi/spi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="InputDevices/InputDevices.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="InputDevices/InputDevices.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="OutputTest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="OutputTest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PythonWrapper.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="font/font.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="font/font.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="myCommon.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="port.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
