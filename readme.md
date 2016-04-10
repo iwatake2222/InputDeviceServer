@@ -14,7 +14,8 @@
 * Html/JavaScript call WebAPI (ajax) and display the input device status in client web browser
 
 
-![Picture](00_doc/picture.jpg)
+Link to youtube is bellow:  
+[![Youtube](00_doc/picture.jpg)](https://www.youtube.com/watch?v=TPdDwG7BYeE)
 
 ### Whole picture
 ![Whole picture simple](00_doc/WholePictureSimple.jpg)
