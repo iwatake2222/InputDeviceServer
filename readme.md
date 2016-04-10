@@ -56,6 +56,8 @@ pi$> sudo apt install libboost-all-dev
 ```
 g++ -I/usr/include/python2.7  -DPYTHON_WRAPPER -fPIC -shared -o InputDeviceServer.so Application.cpp ./DriverGPIO/gpio.c ./DriverI2C/i2c.c ./DriverLcdST7735R/DriverLcdST7735R.cpp ./DriverLcdST7735R/DriverLcdST7735RText.cpp ./DriverOledSSD1306/DriverOledSSD1306.cpp ./DriverOledSSD1306/DriverOledSSD1306Text.cpp ./DriverSpi/spi.c ./InputDevices/InputDevices.cpp OutputTest.cpp PythonWrapper.cpp ./font/font.c -lboost_python -lwiringPi -lpthread
 ```
+* source file is automatically copied to
+	* .netbeans/remote/192.168.0.144/<host>/home/<user>/<path>/NetBeansProjects/InputDeviceServer/InputDeviceServer/
 
 ### Memo I2C setup
 * Enable I2C (and SPI)
@@ -74,7 +76,8 @@ g++ -I/usr/include/python2.7  -DPYTHON_WRAPPER -fPIC -shared -o InputDeviceServe
 
 ## Web (Python) side
 ### How to run
-sudo index.py &
+* $PI$ > sudo index.py &
+* access to "http://192.168.0.144:2000"
 
 ### Python Libraries needed
 * pip install flask
@@ -140,6 +143,9 @@ USART = System Console
 SPI0.0 = LcdST7735R
 SPI0.1 = 
 I2C = Accelerometer (ADXL345), OLED_SSD1306
+
+## Note
+LCD_ST7735_RES is set VDD
 ```
 
 
