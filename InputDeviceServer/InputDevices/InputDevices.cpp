@@ -233,9 +233,9 @@ void* InputDevices::threadInputRotary() {
             cntMeasureSpeed = 0;
             int32_t diff = m_inputStatus.rotaryTickSum - previousRotaryTickSum;
             previousRotaryTickSum = m_inputStatus.rotaryTickSum;
+            m_inputStatus.rotaryTickSpeed = diff * (1000 / (ROTARY_SPEED_MEASURE_INTERVAL_TIMES*SLEEP_TIME_ROTARY_MS));
+            m_inputStatus.rotaryDegreeSpeed = diff * (ROTARY_TICK_DEGREE * 1000 / (ROTARY_SPEED_MEASURE_INTERVAL_TIMES*SLEEP_TIME_ROTARY_MS));
             if( diff != 0 ){                    
-                m_inputStatus.rotaryTickSpeed = diff * (1000 / (ROTARY_SPEED_MEASURE_INTERVAL_TIMES*SLEEP_TIME_ROTARY_MS));
-                m_inputStatus.rotaryDegreeSpeed = diff * (ROTARY_TICK_DEGREE * 1000 / (ROTARY_SPEED_MEASURE_INTERVAL_TIMES*SLEEP_TIME_ROTARY_MS));
                 //cout << m_inputStatus.rotaryTickSpeed << endl;
                 // call registered callback functions
                 for( uint32_t i = 0; i < MAX_NUM_CALLBACK; i++ ){

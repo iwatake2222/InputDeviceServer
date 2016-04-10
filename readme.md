@@ -9,16 +9,21 @@
 	* OLED SSD1306 (I2C)
 	* LCD ST7735R(SPI)
 
-* Web application (Python) calls shared library which offers the above functions, then displays the input device status in client web browser
+* Web application (Python) provides WebAPI using shared library which offers the above functions
+
+* Html/JavaScript call WebAPI (ajax) and display the input device status in client web browser
+
+
+![Picture](00_doc/picture.jpg)
 
 ### Whole picture
-![Big picture](00_doc/BigPictureSimple.jpg)
+![Whole picture simple](00_doc/WholePictureSimple.jpg)
 
 ### Whole picture in details
-![Big picture](00_doc/BigPicture.jpg)
+![Whole picture](00_doc/WholePicture.jpg)
 
-![Big picture](00_doc/SoftwareStructure.jpg)
-![Big picture](00_doc/Thread.jpg)
+![SoftwareStructure](00_doc/SoftwareStructure.jpg)
+![Thread](00_doc/Thread.jpg)
 
 
 ## C++ (User land) side
@@ -44,7 +49,7 @@ pi$> sudo apt install libboost-all-dev
 
 ### Build on Host PC
 * Refer to <https://github.com/take-iwiw/RaspberryPiCrossCompileSetup>
-* You can create C++ application (start from main), but you cannot create "so" file on Host PC. (It might be possible if you install Boost.Python for ARM)
+* You can create C++ application (start from main), but you cannot create shared library "InputDeviceServer.so" file on Host PC. (It might be possible if you install Boost.Python for ARM)
 
 ### Build on Raspberry Pi
 * Type the following command on Raspberry Pi after you upload all the source code. It generate a shared library("so")
@@ -54,7 +59,7 @@ g++ -I/usr/include/python2.7  -DPYTHON_WRAPPER -fPIC -shared -o InputDeviceServe
 
 ### Memo I2C setup
 * Enable I2C (and SPI)
-	* $PI$ > sudo raspi-config 
+	* $PI$ > sudo raspi-config
 	* 9 Advanced Options
 		* A7 I2C
 		* A6 SPI
@@ -68,18 +73,32 @@ g++ -I/usr/include/python2.7  -DPYTHON_WRAPPER -fPIC -shared -o InputDeviceServe
 
 
 ## Web (Python) side
-* todo
-* sudo python
-* import InputDeviceServer
-* InputDeviceServer.getInputKeyNum()
-* InputDeviceServer.startInput()
-* print InputDeviceServer.getInputStatus().accelX
-* InputDeviceServer.getInputKey(0)
-* InputDeviceServer.stopInput()
-* InputDeviceServer.outputTest(0, 1)
+### How to run
+sudo index.py &
+
+### Python Libraries needed
+* pip install flask
+
+### HTML Libraries used
+* already saved in static directory
+	* jQuery
+	* bootstrap
+	* bootstrap-switch
+	* AngularJS
 
 ## keep it running
-* todo
+```
+$PI$ > sudo chmod +x  /etc/rc.local
+$PI$ > sudo nano /etc/rc.local
+```
+```
+# ... other start up scripts
+# Start Input Device Servr
+python /home/pi/dev/InputDeviceServerWeb/index.py &
+
+exit 0
+```
+* note: path must be absolute path (neither ../ nor ~/)
 
 
 ## Portmap

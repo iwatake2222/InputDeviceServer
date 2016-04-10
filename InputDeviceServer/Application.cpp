@@ -82,8 +82,7 @@ void* Application::threadMainLoop() {
         //snprintf(buffer, sizeof(buffer), "X: %03d, Y: %03d, Z: %03d", inputStatus.accelX, inputStatus.accelY, inputStatus.accelZ);
         snprintf(buffer, sizeof(buffer), "XY: %03d %03d", inputStatus.accelX, inputStatus.accelY);
         printLcd(buffer , 0, 3);
-        usleep(20*1000);
-        
+       
         usleep(SLEEP_TIME_MS*1000);
         if(m_isExit) break;    
     }
